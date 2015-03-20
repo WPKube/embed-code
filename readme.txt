@@ -2,8 +2,8 @@
 Contributors: GalenGidman
 Tags: embed, code, embed code, header code, head code, footer code, foot code, typekit, favicon, meta tags, google fonts, analytics, analytics code, tracking code, tracking code embed, embed tracking code, google analytics, analytics, embed analytics, tracking, embed tracking, meta code
 Requires at least: 3.1
-Tested up to: 4.1
-Stable tag: 1.0
+Tested up to: 4.1.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,5 +19,4 @@ Upload and activate the plugin.
 
 == Changelog ==
 
-= 1.0 =
-* First release
+[Follow development on GitHub](https://github.com/galengidman/embed-code)

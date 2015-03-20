@@ -5,8 +5,12 @@ Plugin URI:  http://galengidman.com/plugins/embed-code/
 Description: Easiest way embed code in the head or footer of your site. Can be used for Google Analytics, other tracking code, favicons, meta tags, or any 3rd-party embed code.
 Author:      Galen Gidman
 Author URI:  http://galengidman.com/
-Version:     1.0
+Version:     1.0.1
 */
+
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
 
 /**
  * Registers the options page.
