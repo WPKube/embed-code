@@ -98,7 +98,7 @@ function ec_footer_code_callback() {
  */
 function ec_options_page() {
 
-  $message = sprintf( __( 'If you&rsquo;ve found this plugin useful, please consider <a href="%s" target="_blank">leaving a review</a>', 'embed-code' ), 'https://wordpress.org/support/view/plugin-reviews/embed-code' );
+  $message = sprintf( __( 'If you&rsquo;ve found this plugin useful, please consider <a href="%s" target="_blank">leaving a review</a>.', 'embed-code' ), 'https://wordpress.org/support/view/plugin-reviews/embed-code' );
 
 ?>
 
