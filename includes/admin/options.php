@@ -170,7 +170,7 @@ function ec_options_page() {
 			?>
 		</form>
 
-		<?php echo $message; ?>
+		<p><?php echo $message; ?></p>
 	</div>
 
 	<?php
