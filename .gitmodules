@@ -1,0 +1,3 @@
+[submodule "includes/vendor/ct-meta-box"]
+	path = includes/vendor/ct-meta-box
+	url = git@github.com:churchthemes/ct-meta-box.git
