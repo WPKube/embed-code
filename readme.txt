@@ -7,7 +7,7 @@ Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easiest way embed code in the head or footer. site-wide or on a per-page/post basis.
+The easiest way embed code in the head or footer, site-wide or on a per-page/post basis.
 
 == Description ==
 

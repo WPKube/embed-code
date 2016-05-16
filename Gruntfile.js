@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			release: {
 				files: [{
 					expand: true,
-					src: ['**', '!**/node_modules/**', '!Gruntfile.js', '!package.json'],
+					src: ['**', '!node_modules/**', '!Gruntfile.js', '!package.json', '!assets/**'],
 					dest: '<%= pkg.name %>/'
 				}]
 			}
