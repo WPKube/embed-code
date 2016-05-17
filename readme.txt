@@ -3,7 +3,7 @@ Contributors: GalenGidman
 Tags: embed, code, embed code, header code, head code, footer code, foot code, typekit, favicon, meta tags, google fonts, analytics, analytics code, tracking code, tracking code embed, embed tracking code, google analytics, analytics, embed analytics, tracking, embed tracking, meta code, custom CSS, custom JavaScript
 Requires at least: 3.1
 Tested up to: 4.5.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Embed Code makes embedding global or page/post-specific header and footer super 
 * Typekit font scripts
 * Custom CSS
 * Custom JavaScript
-* Optimizely embed Code
+* Optimizely embed code
 * Facebook tracking pixel
 * Live chat integration
 
@@ -26,7 +26,7 @@ It even supports custom post types!
 
 == Screenshots ==
 
-1. The site-wide embed code settings page.
+1. The site-wide Embed Code settings page.
 2. Embed Code on a post.
 3. Embed Code on a page.
 
