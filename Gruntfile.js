@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			release: {
 				files: [{
 					expand: true,
-					src: ['**', '!node_modules/**', '!Gruntfile.js', '!package.json', '!assets/**'],
+					src: ['**', '!node_modules/**', '!Gruntfile.js', '!package.json', '!dotorg-assets/**'],
 					dest: '<%= pkg.name %>/'
 				}]
 			}
