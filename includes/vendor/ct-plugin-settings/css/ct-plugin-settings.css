@@ -1,0 +1,19 @@
+/**
+ * CT Plugin Settings Styles
+ */
+
+/* Hide tabs and form before load */
+
+#ctps-tabs,
+#ctps-form,
+#ctps-form tr,
+.ctps-section-desc {
+	display: none;
+}
+
+/* Input */
+
+.ctps-textarea {
+	width: 400px;
+	height: 100px;
+}
