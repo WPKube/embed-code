@@ -44,27 +44,9 @@ class EC_Plugin {
 			'id'   => $prefix . 'global-code-title',
 		] );
 
-		$code_kses = [ 'code' => [] ];
-
 		$cmb->add_field( $this->get_field_args_head_code( $prefix ) );
 
 		$cmb->add_field( $this->get_field_args_footer_code( $prefix ) );
-
-		$cmb->add_field( [
-			'name' => esc_html__( 'Options', 'embed-code' ),
-			'type' => 'title',
-			'id'   => $prefix . 'options-title',
-		] );
-
-		$cmb->add_field( [
-			'name'              => esc_html__( 'Post Types', 'embed_code' ),
-			'id'                => $prefix . 'post_types',
-			'type'              => 'multicheck',
-			'options'           => $this->get_post_type_options(),
-			'default'           => [ 'post', 'page' ],
-			'select_all_button' => false,
-			'sanitization_cb'   => 'ec_sanitize_post_types',
-		] );
 
 	}
 
@@ -110,43 +92,6 @@ class EC_Plugin {
 
 	}
 
-	protected function get_post_type_options() {
-
-		$options = [];
-
-		$post_types = get_post_types( [ 'public' => true ] );
-		$post_types = array_values( $post_types );
-		$post_types = array_diff( $post_types, [ 'attachment' ] );
-
-		foreach ( $post_types as $post_type ) {
-			$post_type = get_post_type_object( $post_type );
-			$options[ $post_type->name ] = $post_type->label;
-		}
-
-		return $options;
-
-	}
-
-	protected function get_default_post_types() {
-
-		return apply_filters( 'ec_default_post_types', [ 'post', 'page' ] );
-
-	}
-
-	protected function get_enabled_post_types() {
-
-		$options = get_option( 'ec_options' );
-
-		if ( isset( $options['ec_post_types'] ) ) {
-			$post_types = $options['ec_post_types'];
-		} else {
-			$post_types = $this->get_default_post_types();
-		}
-
-		return apply_filters( 'ec_enabled_post_types', $post_types );
-
-	}
-
 	protected function get_field_args_head_code( $prefix ) {
 
 		return [
@@ -185,6 +130,16 @@ class EC_Plugin {
 
 	}
 
+	protected function get_enabled_post_types() {
+
+		$post_types = get_post_types( [ 'public' => true ] );
+		$post_types = array_values( $post_types );
+		$post_types = array_diff( $post_types, [ 'attachment' ] );
+
+		return apply_filters( 'ec_enabled_post_types', $post_types );
+
+	}
+
 	protected function get_code_kses() {
 
 		return [ 'code' => [] ];
@@ -196,13 +151,3 @@ class EC_Plugin {
 endif;
 
 new EC_Plugin();
-
-function ec_sanitize_post_types( $value ) {
-
-	if ( empty( $value ) ) {
-		$value = [ 'ec_non_existant_post_type' ];
-	}
-
-	return $value;
-
-}
