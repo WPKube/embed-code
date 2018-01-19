@@ -40,6 +40,7 @@ class EC_Plugin {
 
 		$cmb->add_field( [
 			'name' => 'Global Code',
+			'desc' => esc_html__( 'The code below will be added to the entire website.', 'embed-code' ),
 			'type' => 'title',
 			'id'   => $prefix . 'global-code-title',
 		] );
