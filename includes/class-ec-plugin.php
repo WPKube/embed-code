@@ -94,15 +94,9 @@ class EC_Plugin {
 
 	}
 
-	protected function get_field_args_head_code( $prefix ) {
+	protected function get_field_args_code_defaults() {
 
 		return [
-			'name'       => esc_html__( 'Head Code', 'embed-code' ),
-			'desc'       => wp_kses(
-				__( 'Will be inserted just before the <code>&lt;/head&gt;</code> tag.', 'embed-code' ),
-				$this->get_code_kses()
-			),
-			'id'         => $prefix . 'head_code',
 			'type'       => 'textarea',
 			'attributes' => [
 				'rows'        => 8,
@@ -113,22 +107,29 @@ class EC_Plugin {
 
 	}
 
+	protected function get_field_args_head_code( $prefix ) {
+
+		return wp_parse_args( [
+			'name' => esc_html__( 'Head Code', 'embed-code' ),
+			'desc' => wp_kses(
+				__( 'Will be inserted just before the <code>&lt;/head&gt;</code> tag.', 'embed-code' ),
+				[ 'code' => [] ]
+			),
+			'id'   => $prefix . 'head_code',
+		], $this->get_field_args_code_defaults() );
+
+	}
+
 	protected function get_field_args_footer_code( $prefix ) {
 
-		return [
-			'name'       => esc_html__( 'Footer Code', 'embed-code' ),
-			'desc'       => wp_kses(
+		return wp_parse_args( [
+			'name' => esc_html__( 'Footer Code', 'embed-code' ),
+			'desc' => wp_kses(
 				__( 'Will be inserted just before the <code>&lt;/body&gt;</code> tag.', 'embed-code' ),
-				$this->get_code_kses()
+				[ 'code' => [] ]
 			),
-			'id'         => $prefix . 'footer_code',
-			'type'       => 'textarea',
-			'attributes' => [
-				'rows'        => 8,
-				'class'       => 'cmb2_textarea code',
-				'placeholder' => esc_attr__( 'Paste code here&hellip;', 'embed-code' ),
-			],
-		];
+			'id'   => $prefix . 'footer_code',
+		], $this->get_field_args_code_defaults() );
 
 	}
 
@@ -139,12 +140,6 @@ class EC_Plugin {
 		$post_types = array_diff( $post_types, [ 'attachment' ] );
 
 		return apply_filters( 'ec_enabled_post_types', $post_types );
-
-	}
-
-	protected function get_code_kses() {
-
-		return [ 'code' => [] ];
 
 	}
 
