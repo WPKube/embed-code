@@ -3,7 +3,7 @@ Contributors:      galengidman
 Tags:              embed code, header code, footer code, tracking code, embed javascript
 Requires at least: 4.7.0
 Tested up to:      4.9.2
-Requires PHP:      5.6
+Requires PHP:      5.4
 Stable tag:        trunk
 
 The easiest way to embed code in the head or footer of your site, globally or on a per-page/post basis.
