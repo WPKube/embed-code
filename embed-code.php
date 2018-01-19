@@ -1,14 +1,12 @@
 <?php
 /**
  * Plugin Name: Embed Code
- * Plugin URI:  https://github.com/galengidman/embed-code
- * Description: The easiest way embed code in the head or footer of your site, globally or on a per-page/post basis.
- * Author:      Galen Gidman
- * Author URI:  http://galengidman.com/
+ * Description: The easiest way to embed code in the head or footer of your site, globally or on a per-page/post basis.
  * Version:     2.0.0
+ * Author:      galengidman
+ * Author URI:  https://galengidman.com/
+ * License:     GPL2+
  * Text Domain: embed-code
- * License:     GPLv2
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

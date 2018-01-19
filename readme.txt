@@ -1,17 +1,16 @@
 === Embed Code ===
-Contributors: GalenGidman
-Tags: embed, code, embed code, header code, head code, footer code, foot code, typekit, favicon, meta tags, google fonts, analytics, analytics code, tracking code, tracking code embed, embed tracking code, google analytics, analytics, embed analytics, tracking, embed tracking, meta code, custom CSS, custom JavaScript
-Requires at least: 3.1
-Tested up to: 4.5.2
-Stable tag: 1.1.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors:      galengidman
+Tags:              embed code, header code, footer code, tracking code, embed javascript
+Requires at least: 4.7.0
+Tested up to:      4.9.2
+Requires PHP:      5.6
+Stable tag:        trunk
 
-The easiest way embed code in the head or footer, site-wide or on a per-page/post basis.
+The easiest way to embed code in the head or footer of your site, globally or on a per-page/post basis.
 
 == Description ==
 
-Embed Code makes embedding global or page/post-specific header and footer super easy. It can be used to add almost anything, including:
+Embed Code makes embedding global or page/post-specific header and footer code super easy. It can be used to add almost anything, including:
 
 * Google Analytics tracking code
 * Site verification snippets
@@ -22,7 +21,7 @@ Embed Code makes embedding global or page/post-specific header and footer super 
 * Facebook tracking pixel
 * Live chat integration
 
-It even supports custom post types!
+It even supports embedding code on custom post types!
 
 == Screenshots ==
 
@@ -32,7 +31,9 @@ It even supports custom post types!
 
 == Installation ==
 
-Upload and activate the plugin.
+- **WordPress Plugins Directory**: Navigate to *Plugins* → *Add New* in the WordPress admin and search “Embed Code.” Click *Install* and then *Activate*.
+- **Zip Upload**: Navigate to *Plugins* → *Add New* → *Upload Plugin* in the WordPress admin. Browse to the .zip file containing the plugin on your computer and upload, then activate.
+- **Manual FTP Upload**: Upload the plugin folder to `/wp-content/plugins/`. Navigate to *Plugins* in the WordPress admin and activate.
 
 == Changelog ==
 
