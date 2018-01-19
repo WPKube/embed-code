@@ -72,11 +72,11 @@ class EC_Plugin {
 
 		$option = get_option( 'ec_options' );
 		if ( isset( $option['ec_head_code'] ) ) {
-			echo $option['ec_head_code'];
+			echo $this->wrap_line_breaks( $option['ec_head_code'] );
 		}
 
 		if ( is_singular( $this->get_enabled_post_types() ) ) {
-			echo get_post_meta( get_the_ID(), '_ec_head_code', true );
+			echo $this->wrap_line_breaks( get_post_meta( get_the_ID(), '_ec_head_code', true ) );
 		}
 
 	}
@@ -85,11 +85,11 @@ class EC_Plugin {
 
 		$option = get_option( 'ec_options' );
 		if ( isset( $option['ec_footer_code'] ) ) {
-			echo $option['ec_footer_code'];
+			echo $this->wrap_line_breaks( $option['ec_footer_code'] );
 		}
 
 		if ( is_singular( $this->get_enabled_post_types() ) ) {
-			echo get_post_meta( get_the_ID(), '_ec_footer_code', true );
+			echo $this->wrap_line_breaks( get_post_meta( get_the_ID(), '_ec_footer_code', true ) );
 		}
 
 	}
@@ -141,6 +141,12 @@ class EC_Plugin {
 		$post_types = array_diff( $post_types, [ 'attachment' ] );
 
 		return apply_filters( 'ec_enabled_post_types', $post_types );
+
+	}
+
+	protected function wrap_line_breaks( $str ) {
+
+		return "\n$str\n";
 
 	}
 
