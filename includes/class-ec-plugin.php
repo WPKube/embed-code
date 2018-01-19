@@ -58,6 +58,7 @@ class EC_Plugin {
 			'id'           => $prefix . 'metabox',
 			'title'        => esc_html__( 'Embed Code', 'embed-code' ),
 			'object_types' => $this->get_enabled_post_types(),
+			'priority'     => 'low',
 		] );
 
 		$cmb->add_field( $this->get_field_args_head_code( $prefix ) );
