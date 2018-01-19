@@ -3,7 +3,7 @@
  * Plugin Name: Embed Code
  * Description: The easiest way to embed code in the head or footer of your site, globally or on a per-page/post basis.
  * Version:     2.0.0
- * Author:      galengidman
+ * Author:      Galen Gidman
  * Author URI:  https://galengidman.com/
  * License:     GPL2+
  * Text Domain: embed-code
