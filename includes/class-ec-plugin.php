@@ -10,13 +10,13 @@ class EC_Plugin {
 
 	public function __construct() {
 
-		add_action( 'plugins_loaded', [ $this, 'include_vendor' ] );
+		add_action( 'plugins_loaded',  [ $this, 'include_vendor' ] );
 
 		add_action( 'cmb2_admin_init', [ $this, 'options_page' ] );
 		add_action( 'cmb2_admin_init', [ $this, 'meta_box' ] );
 
-		add_action( 'wp_head',   [ $this, 'output_head_code' ] );
-		add_action( 'wp_footer', [ $this, 'output_footer_code' ] );
+		add_action( 'wp_head',         [ $this, 'output_head_code' ] );
+		add_action( 'wp_footer',       [ $this, 'output_footer_code' ] );
 
 	}
 
