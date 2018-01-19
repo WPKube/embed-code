@@ -71,8 +71,8 @@ class EC_Plugin {
 	public function output_head_code() {
 
 		$option = get_option( 'ec_options' );
-		if ( isset( $options['head_code'] ) ) {
-			echo $options['head_code'];
+		if ( isset( $option['ec_head_code'] ) ) {
+			echo $option['ec_head_code'];
 		}
 
 		if ( is_singular( $this->get_enabled_post_types() ) ) {
@@ -84,8 +84,8 @@ class EC_Plugin {
 	public function output_footer_code() {
 
 		$option = get_option( 'ec_options' );
-		if ( isset( $options['footer_code'] ) ) {
-			echo $options['footer_code'];
+		if ( isset( $option['ec_footer_code'] ) ) {
+			echo $option['ec_footer_code'];
 		}
 
 		if ( is_singular( $this->get_enabled_post_types() ) ) {
