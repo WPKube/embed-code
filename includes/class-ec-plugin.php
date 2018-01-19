@@ -97,12 +97,14 @@ class EC_Plugin {
 	protected function get_field_args_code_defaults() {
 
 		return [
-			'type'       => 'textarea',
-			'attributes' => [
+			'type'            => 'textarea',
+			'attributes'      => [
 				'rows'        => 8,
 				'class'       => 'cmb2_textarea code',
 				'placeholder' => esc_attr__( 'Paste code here&hellip;', 'embed-code' ),
 			],
+			'sanitization_cb' => false,
+			'escape_cb'       => false,
 		];
 
 	}
