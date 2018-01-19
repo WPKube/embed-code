@@ -104,7 +104,6 @@ class EC_Plugin {
 				'placeholder' => esc_attr__( 'Paste code here&hellip;', 'embed-code' ),
 			],
 			'sanitization_cb' => false,
-			'escape_cb'       => false,
 		];
 
 	}
