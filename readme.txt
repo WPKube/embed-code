@@ -25,9 +25,8 @@ It even supports embedding code on custom post types!
 
 == Screenshots ==
 
-1. The site-wide Embed Code settings page.
-2. Embed Code on a post.
-3. Embed Code on a page.
+1. Embed Code on a page.
+2. The Embed Code settings page.
 
 == Installation ==
 
